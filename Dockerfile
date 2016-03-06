@@ -3,7 +3,7 @@ FROM centos:7
 ENV PATH $PATH:/root/bin
 
 RUN yum groupinstall -y 'Development Tools' && \
-	yum install -y selinux-devel wget glibc.i686 && \
+	yum install -y selinux-devel wget glibc.i686 libSM.i686 && \
 	yum clean all
 
 RUN wget http://mriedmann.github.io/MAKEDEV-3.23-1.tar.gz && \
